@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+groq
+psutil
+python-dotenv
+send2trash
+ddgs
+# opcional: janela nativa WebView2 (JARVIS_SHELL=webview)
+# pywebview
+mss
+Pillow
+# opcional: STT local (voz sem depender do navegador)
+# faster-whisper

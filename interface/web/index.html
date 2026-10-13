@@ -1,0 +1,47 @@
+<!doctype html><html lang="pt-BR" data-theme="cyan"><head><meta charset="utf-8"><title>J.A.R.V.I.S.</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/static/app.css"></head>
+<body data-s="idle">
+<header id="top"><div class="brand">J.A.R.V.I.S.</div>
+ <nav id="tabs"><button data-tab="jarvis" class="on">JARVIS</button><button data-tab="browser">BROWSER</button><button data-tab="files">FILES</button><button data-tab="news">NEWS</button><button data-tab="system">SYSTEM</button><button data-tab="settings">SETTINGS</button></nav>
+ <div id="pill"><span id="lbl">EM ESPERA</span><i></i></div></header>
+<main>
+<section id="v-jarvis" class="view on">
+ <aside class="side"><div class="panel"><h4>SISTEMA</h4>
+  <div class="bar"><span>CPU <em id="vc">0%</em></span><i><b id="bc"></b></i></div>
+  <div class="bar"><span>RAM <em id="vr">0%</em></span><i><b id="br"></b></i></div>
+  <div class="bar"><span>DISCO <em id="vd">0%</em></span><i><b id="bd"></b></i></div></div>
+  <div class="panel" id="scr"><h4>👁 SCREEN</h4><div id="scrmons"></div><div id="scrst" class="ready"><i></i><span>Ready</span></div>
+   <div class="row" style="margin-top:8px;flex-wrap:wrap"><button id="scrsee">Ver tela</button><button id="scrboth" hidden>Ver ambos</button></div></div></aside>
+ <div id="center">
+  <div id="orbwrap"><div id="orb" title="Clique: falar · clique enquanto trabalha/fala: interromper"><i class="r3"></i><i class="r1"></i><i class="r2"></i><div class="core"></div></div></div>
+  <div id="stream"></div>
+  <div id="cf" class="panel"><span id="cft"></span><button id="y" class="on">Sim</button><button id="n">Não</button></div>
+  <div id="dock" class="panel">
+   <div id="dockst"><span id="dst">PRONTO</span><span id="dact"></span></div>
+   <div id="dockrow">
+    <button class="ic" id="mic" title="Falar (Espaço)">🎙</button>
+    <input id="t" placeholder="Fale ou digite…" autocomplete="off">
+    <button class="ic" id="retry" title="Tentar de novo" hidden>↻</button>
+    <button class="ic" id="cancel" title="Cancelar" hidden>✕</button>
+    <button class="ic on" id="send" title="Enviar (Enter)">➤</button>
+    <span id="tts"><button class="ic" id="trepeat" title="Repetir a última resposta">🔁</button><button class="ic" id="tpause" title="Pausar/continuar fala">⏸</button><button class="ic" id="tstop" title="Parar de falar">■</button></span>
+   </div><div id="cd"></div></div>
+ </div>
+ <aside class="side"><div class="panel" id="steps"><h4>ATIVIDADE</h4><div id="steplist"></div></div></aside>
+</section>
+<section id="v-browser" class="view"><div class="col"><div class="panel"><div class="row">
+  <button class="ic" data-b="back" title="Voltar">◀</button><button class="ic" data-b="forward" title="Avançar">▶</button><button class="ic" data-b="reload" title="Recarregar">⟳</button>
+  <input id="addr" class="grow" placeholder="Digite uma URL ou pesquise…"><button id="go">Ir</button><button id="newtab">+ Nova aba</button></div></div>
+ <div class="panel"><h4>ABAS</h4><div id="tabsb" class="list"></div><p class="hint" id="bnote" style="margin-top:10px"></p></div></div></section>
+<section id="v-files" class="view"><div class="col"><div class="panel"><div class="row"><input id="fq" class="grow" placeholder="Buscar arquivos e pastas por nome…"><button id="fgo">Buscar</button></div><div class="row" id="froots" style="margin-top:10px;flex-wrap:wrap"></div></div>
+ <div class="panel grow" style="overflow:auto"><h4 id="fpath">RESULTADOS</h4><div id="flist" class="list"></div></div></div></section>
+<section id="v-news" class="view"><div class="col"><div class="row"><h4 class="grow" style="margin:0">NOTÍCIAS <span id="ncount"></span></h4><span class="hint" id="nhealth"></span><button id="nrefresh">Atualizar</button></div>
+ <div class="row" id="ncats" style="flex-wrap:wrap"></div><div id="nlist" class="panel list" style="flex:1;overflow:auto"></div></div></section>
+<section id="v-system" class="view"><div class="col"><div class="panel"><h4>RECURSOS</h4><div id="sysbars"></div></div><div class="panel"><h4>DISCOS</h4><div id="sysdisks"></div></div><div class="panel"><h4>PROCESSOS (MAIOR USO DE RAM)</h4><table id="systop"></table></div></div></section>
+<section id="v-settings" class="view"><div id="set"><div id="setnav" class="panel"></div><div id="setform" class="panel"></div></div></section>
+</main>
+<div id="nc" class="panel" role="dialog" aria-label="Notícia"><div class="nhead"><span class="ntag">[ J.A.R.V.I.S. — NOTÍCIA ]</span><span id="ncn" class="hint"></span>
+ <button class="ic" data-n="min" title="Minimizar">–</button><button class="ic" data-n="max" title="Expandir">⤢</button><button class="ic" data-n="close" title="Fechar">✕</button></div>
+ <div class="nwrap"><div class="nimg"></div><div class="nbody"><div class="ntitle"></div><div class="nmeta"></div><div class="nsum"></div>
+ <div class="nbtns"><button data-n="repeat">🔊 Ouvir</button><button data-n="more">🗣 Fale mais</button><button data-n="previous">← Anterior</button><button data-n="next" class="on">Próxima →</button><button data-n="open">↗ Abrir</button><button data-n="close">✕ Fechar</button></div></div></div></div>
+<script src="/static/app.js"></script></body></html>
